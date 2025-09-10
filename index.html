@@ -57,10 +57,23 @@
 
     footer{border-top:1px solid #1d2759;margin-top:32px;padding:22px 0;color:#b9c7dc;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 
-    .illus{aspect-ratio:4/3;border-radius:20px;border:1px solid #1d2759;background:
-      radial-gradient(800px 400px at 80% 0%, rgba(255,200,87,.25), transparent 60%),
-      linear-gradient(135deg,#0d1635 0%,#061024 100%);
-      display:grid;place-items:center;}
+    .illus{
+aspect-ratio:4/3;
+border-radius:20px;
+border:1px solid #1d2759;
+overflow:hidden;
+box-shadow:var(--shadow);
+display:flex;
+align-items:center;
+justify-content:center;
+background:#0c122b;
+}
+.illus img{
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+}
     .illus svg{max-width:80%;height:auto;opacity:.9}
 
     @media (max-width:900px){
