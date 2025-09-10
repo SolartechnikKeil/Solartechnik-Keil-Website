@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Solartechnik Keil – Solaranlagen Planung & Installation</title>
+  <meta name="description" content="Solartechnik Keil plant und installiert Photovoltaik‑Anlagen für Eigenheime und Gewerbe. Von Beratung bis Inbetriebnahme – alles aus einer Hand." />
+  <meta name="robots" content="index,follow" />
+  <meta property="og:title" content="Solartechnik Keil – Solaranlagen Planung & Installation" />
+  <meta property="og:description" content="Beratung, Montage, Wartung – Ihre PV‑Anlage vom Profi." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="/favicon.ico" />
+  <style>
+    :root{
+      --bg:#0b1020;      /* dunkles Blau als Grundton */
+      --card:#111734;     /* Kartenhintergrund */
+      --muted:#9fb3c8;    /* Sekundärtext */
+      --brand:#ffc857;    /* warmes Solar‑Gelb */
+      --ok:#34d399;       /* Akzent grün */
+      --text:#e8eef6;     /* Haupttext */
+      --shadow: 0 10px 30px rgba(0,0,0,.25);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:radial-gradient(1200px 800px at 20% -10%, #1a2350 0%, var(--bg) 60%);color:var(--text);font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrapper{max-width:1100px;margin:0 auto;padding:24px}
+    header{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:8px 0}
+    .logo{display:flex;align-items:center;gap:12px}
+    .logo svg{width:40px;height:40px}
+    nav a{margin-left:16px;font-weight:600;opacity:.9}
+    .cta{background:var(--brand);color:#121212;border:none;border-radius:14px;padding:10px 16px;font-weight:700;box-shadow:var(--shadow);cursor:pointer}
+    .cta:hover{filter:brightness(.95)}
+
+    .hero{display:grid;grid-template-columns:1.1fr 0.9fr;gap:36px;align-items:center;padding:48px 0}
+    h1{font-size:clamp(28px,4vw,44px);line-height:1.15;margin:0 0 12px;font-weight:800}
+    .hero p{color:var(--muted);margin:0 0 18px}
+    .badge{display:inline-flex;align-items:center;gap:8px;background:#18204a;border:1px solid #2a356b;color:#bcd0ea;border-radius:999px;padding:6px 10px;font-size:.9rem;margin-bottom:12px}
+    .card{background:linear-gradient(180deg,#0f1737 0%, #0c122b 100%);border:1px solid #1d2759;border-radius:20px;padding:22px;box-shadow:var(--shadow)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .grid .card h3{margin:0 0 6px}
+    .grid .card p{margin:0;color:var(--muted)}
+
+    .section{padding:42px 0}
+    .section h2{font-size:clamp(22px,3vw,32px);margin:0 0 12px}
+    .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+    .kpis .card{display:flex;flex-direction:column;align-items:flex-start}
+    .kpi-num{font-size:26px;font-weight:800}
+
+    .contact{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+    form{display:grid;gap:12px}
+    label{font-weight:600}
+    input, textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid #263068;background:#0b1230;color:var(--text)}
+    textarea{min-height:140px}
+    .helper{font-size:.9rem;color:var(--muted)}
+    .success{display:none;background:#0e1f16;border:1px solid #1f5036;color:#b7f4d5;padding:12px;border-radius:12px}
+
+    footer{border-top:1px solid #1d2759;margin-top:32px;padding:22px 0;color:#b9c7dc;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+
+    .illus{aspect-ratio:4/3;border-radius:20px;border:1px solid #1d2759;background:
+      radial-gradient(800px 400px at 80% 0%, rgba(255,200,87,.25), transparent 60%),
+      linear-gradient(135deg,#0d1635 0%,#061024 100%);
+      display:grid;place-items:center;}
+    .illus svg{max-width:80%;height:auto;opacity:.9}
+
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
+      .kpis{grid-template-columns:repeat(2,1fr)}
+      .contact{grid-template-columns:1fr}
+      header{gap:8px}
+      nav{display:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="logo">
+        <!-- einfache Logo‑Marke als SVG -->
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="32" cy="32" r="16" fill="#ffc857"/>
+          <path d="M32 2v10M32 52v10M2 32h10M52 32h10M11 11l7 7M46 46l7 7M11 53l7-7M46 18l7-7" stroke="#ffc857" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <strong>Solartechnik Keil</strong>
+      </div>
+      <nav>
+        <a href="#leistungen">Leistungen</a>
+        <a href="#vorteile">Warum wir</a>
+        <a href="#kontakt">Kontakt</a>
+        <a class="cta" href="#kontakt">Angebot anfragen</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <span class="badge">⚡ Photovoltaik vom Meisterbetrieb</span>
+        <h1>Ihre Solaranlage – geplant, montiert & in Betrieb genommen.</h1>
+        <p>Solartechnik Keil installiert Photovoltaik‑Anlagen für Einfamilienhäuser und Gewerbe. Wir begleiten Sie von der ersten Beratung über statische Prüfung und Montage bis zur Anmeldung beim Netzbetreiber.</p>
+        <p><a class="cta" href="#kontakt">Kostenloses Erstgespräch sichern</a></p>
+        <div class="grid" id="leistungen">
+          <div class="card">
+            <h3>Beratung & Planung</h3>
+            <p>Dachcheck, Auslegung, Ertragsprognose, Fördermittel.</p>
+          </div>
+          <div class="card">
+            <h3>Montage & Elektro</h3>
+            <p>Modul‑Montage, Wechselrichter, Speicher, Wallbox.</p>
+          </div>
+          <div class="card">
+            <h3>Service & Monitoring</h3>
+            <p>Inbetriebnahme, Anmeldung, Wartung, Fernüberwachung.</p>
+          </div>
+        </div>
+      </div>
+      <div class="illus card" aria-hidden="true">
+        <!-- Symbolische Illustration: Haus mit PV‑Modulen -->
+        <svg viewBox="0 0 300 220" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#2f5fff"/>
+              <stop offset="100%" stop-color="#0a2a9a"/>
+            </linearGradient>
+          </defs>
+          <rect x="30" y="120" width="240" height="80" rx="10" fill="#0e193d" stroke="#223067"/>
+          <polygon points="30,120 150,50 270,120" fill="#122055" stroke="#223067"/>
+          <rect x="70" y="135" width="70" height="35" fill="#0b1537" stroke="#223067"/>
+          <!-- PV Module -->
+          <g transform="translate(110,70) rotate(-20)">
+            <rect x="0" y="0" width="140" height="55" fill="url(#g)" stroke="#1a3eb8" rx="6"/>
+            <g opacity=".5" stroke="#a6c2ff">
+              <line x1="20" y1="0" x2="20" y2="55"/>
+              <line x1="45" y1="0" x2="45" y2="55"/>
+              <line x1="70" y1="0" x2="70" y2="55"/>
+              <line x1="95" y1="0" x2="95" y2="55"/>
+              <line x1="120" y1="0" x2="120" y2="55"/>
+            </g>
+          </g>
+          <!-- Sonne -->
+          <circle cx="250" cy="40" r="22" fill="#ffc857"/>
+        </svg>
+      </div>
+    </section>
+
+    <section class="section" id="vorteile">
+      <h2>Warum Solartechnik Keil?</h2>
+      <div class="kpis">
+        <div class="card"><span class="kpi-num">10+ Jahre</span><span>Erfahrung in PV‑Montage</span></div>
+        <div class="card"><span class="kpi-num">1.000+ kWp</span><span>installierte Leistung</span></div>
+        <div class="card"><span class="kpi-num">5 Jahre</span><span>Gewährleistung auf Montage</span></div>
+        <div class="card"><span class="kpi-num">24h</span><span>Reaktionszeit im Service</span></div>
+      </div>
+    </section>
+
+    <section class="section contact" id="kontakt">
+      <div>
+        <h2>Anfrage & Kontakt</h2>
+        <p>Sie planen eine PV‑Anlage? Schicken Sie uns einige Eckdaten – wir melden uns umgehend.</p>
+        <div class="card">
+          <!--
+            KONTAKTFORMULAR (funktioniert ohne eigenes Backend über Formspree o.ä.)
+            1) Ersetzen Sie die action‑URL unten durch Ihren Form‑Endpoint, z. B.:
+               https://formspree.io/f/XXXXXXXX
+            2) Alternativ: Auf Shared Hosting können Sie eine einfache PHP‑E‑Mail‑Weiterleitung nutzen.
+            3) Schnell & simpel (nicht so zuverlässig): action="mailto:ihrname@domain.de" mit enctype=text/plain.
+          -->
+          <form id="contactForm" method="POST" action="https://formspree.io/f/XXXXXXXX">
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+            <label for="name">Ihr Name</label>
+            <input id="name" name="name" required placeholder="Max Mustermann" />
+
+            <label for="email">E‑Mail</label>
+            <input id="email" name="email" type="email" required placeholder="max@beispiel.de" />
+
+            <label for="phone">Telefon (optional)</label>
+            <input id="phone" name="phone" placeholder="0151 1234567" />
+
+            <label for="message">Nachricht</label>
+            <textarea id="message" name="message" required placeholder="Kurze Projektbeschreibung, z. B. Dachtyp, Postleitzahl, gewünschte Leistung…"></textarea>
+
+            <button class="cta" type="submit">Anfrage senden</button>
+            <p class="helper">Mit dem Senden stimmen Sie der Verarbeitung Ihrer Daten zum Zweck der Kontaktaufnahme zu. <a href="#impressum">Datenschutzhinweise</a></p>
+            <p class="success" id="okMsg">Danke! Ihre Nachricht wurde übermittelt.</p>
+            <noscript>
+              <p>Kein JavaScript? Schreiben Sie uns direkt: <a href="mailto:kontakt@solartechnik-keil.de">kontakt@solartechnik-keil.de</a></p>
+            </noscript>
+          </form>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Kontakt</h3>
+        <p><strong>Solartechnik Keil</strong><br>
+           Musterstraße 12<br>
+           12345 Musterstadt</p>
+        <p>Telefon: <a href="tel:+49123456789">+49 123 456 789</a><br>
+           E‑Mail: <a href="mailto:kontakt@solartechnik-keil.de">kontakt@solartechnik-keil.de</a></p>
+        <p>Öffnungszeiten: Mo–Fr 9–17 Uhr</p>
+        <p><small>USt‑IdNr.: DE999999999</small></p>
+      </div>
+    </section>
+
+    <footer id="impressum">
+      <span>© <span id="y"></span> Solartechnik Keil • Alle Rechte vorbehalten</span>
+      <span><a href="#">Impressum</a> · <a href="#">Datenschutz</a></span>
+    </footer>
+  </div>
+
+  <script>
+    // Jahr automatisch setzen
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Formspree: einfache Bestätigung ohne Seitenwechsel
+    const form = document.getElementById('contactForm');
+    const ok = document.getElementById('okMsg');
+    form?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const endpoint = form.getAttribute('action');
+      try{
+        const res = await fetch(endpoint, {
+          method:'POST',
+          headers:{ 'Accept':'application/json' },
+          body: new FormData(form)
+        });
+        if(res.ok){
+          ok.style.display='block';
+          form.reset();
+        } else {
+          alert('Senden fehlgeschlagen. Bitte per E‑Mail melden.');
+        }
+      }catch(err){
+        alert('Netzwerkfehler. Bitte versuchen Sie es später erneut.');
+      }
+    });
+  </script>
+</body>
+</html>
