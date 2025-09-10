@@ -5,221 +5,142 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Solartechnik Keil – Solaranlagen Planung & Installation</title>
   <meta name="description" content="Solartechnik Keil plant und installiert Photovoltaik‑Anlagen für Eigenheime und Gewerbe. Von Beratung bis Inbetriebnahme – alles aus einer Hand." />
-  <meta name="robots" content="index,follow" />
-  <meta property="og:title" content="Solartechnik Keil – Solaranlagen Planung & Installation" />
-  <meta property="og:description" content="Beratung, Montage, Wartung – Ihre PV‑Anlage vom Profi." />
-  <meta property="og:type" content="website" />
   <link rel="icon" href="/favicon.ico" />
   <style>
-    :root{
-      --bg:#880000;      /* dunkles Rot als Grundton */
-      --card:#ffffff;     /* Kartenhintergrund */
-      --muted:#000000;    /* Sekundärtext */
-      --brand:#ffc857;    /* warmes Solar‑Gelb */
-      --ok:#34d399;       /* Akzent grün */
-      --text:#000000;     /* Haupttext */
-      --shadow: 0 10px 30px rgba(0,0,0,.25);
+    :root {
+      --brand: #fbc02d; /* Solar-Gelb */
+      --accent: #0277bd; /* Blau */
+      --bg: #f9fafb;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --card: #ffffff;
+      --shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:radial-gradient(1200px 800px at 20% -10%, #1a2350 0%, var(--bg) 60%);color:var(--text);font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"}
-    a{color:var(--brand);text-decoration:none}
-    a:hover{text-decoration:underline}
-    .wrapper{max-width:1100px;margin:0 auto;padding:24px}
-    header{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:8px 0}
-    .logo{display:flex;align-items:center;gap:12px}
-    .logo svg{width:40px;height:40px}
-    nav a{margin-left:16px;font-weight:600;opacity:.9}
-    .cta{background:var(--brand);color:#121212;border:none;border-radius:14px;padding:10px 16px;font-weight:700;box-shadow:var(--shadow);cursor:pointer}
-    .cta:hover{filter:brightness(.95)}
 
-    .hero{display:grid;grid-template-columns:1.1fr 0.9fr;gap:36px;align-items:center;padding:48px 0}
-    h1{font-size:clamp(28px,4vw,44px);line-height:1.15;margin:0 0 12px;font-weight:800}
-    .hero p{color:var(--muted);margin:0 0 18px}
-    .badge{display:inline-flex;align-items:center;gap:8px;background:#18204a;border:1px solid #2a356b;color:#bcd0ea;border-radius:999px;padding:6px 10px;font-size:.9rem;margin-bottom:12px}
-    .card{background:linear-gradient(180deg,#0f1737 0%, #0c122b 100%);border:1px solid #1d2759;border-radius:20px;padding:22px;box-shadow:var(--shadow)}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .grid .card h3{margin:0 0 6px}
-    .grid .card p{margin:0;color:var(--muted)}
+    * { box-sizing: border-box; margin:0; padding:0; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
-    .section{padding:42px 0}
-    .section h2{font-size:clamp(22px,3vw,32px);margin:0 0 12px}
-    .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-    .kpis .card{display:flex;flex-direction:column;align-items:flex-start}
-    .kpi-num{font-size:26px;font-weight:800}
+    header { background:#fff; box-shadow: var(--shadow); position:sticky; top:0; z-index:10; }
+    .header-container { max-width: 1100px; margin:0 auto; padding: 1rem 1.5rem; display:flex; justify-content:space-between; align-items:center; }
+    .logo { font-weight:700; font-size:1.25rem; color: var(--accent); display:flex; align-items:center; gap:.5rem; }
+    nav a { margin-left:1rem; font-weight:500; color: var(--text); }
+    .cta { background: var(--brand); color:#000; padding:.6rem 1rem; border-radius:8px; font-weight:600; box-shadow: var(--shadow); }
+    .cta:hover { filter:brightness(.95); }
 
-    .contact{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
-    form{display:grid;gap:12px}
-    label{font-weight:600}
-    input, textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid #263068;background:#0b1230;color:var(--text)}
-    textarea{min-height:140px}
-    .helper{font-size:.9rem;color:var(--muted)}
-    .success{display:none;background:#0e1f16;border:1px solid #1f5036;color:#b7f4d5;padding:12px;border-radius:12px}
+    .hero { max-width:1100px; margin:0 auto; padding:3rem 1.5rem; display:grid; grid-template-columns:1fr 1fr; gap:2rem; align-items:center; }
+    .hero h1 { font-size:2.5rem; font-weight:800; margin-bottom:1rem; }
+    .hero p { margin-bottom:1rem; color: var(--muted); }
+    .hero img { width:100%; border-radius:16px; box-shadow: var(--shadow); object-fit:cover; }
 
-    footer{border-top:1px solid #1d2759;margin-top:32px;padding:22px 0;color:#b9c7dc;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+    .section { max-width:1100px; margin:0 auto; padding:3rem 1.5rem; }
+    .section h2 { font-size:2rem; margin-bottom:1.5rem; font-weight:700; text-align:center; }
 
-    .illus{
-aspect-ratio:4/3;
-border-radius:20px;
-border:1px solid #1d2759;
-overflow:hidden;
-box-shadow:var(--shadow);
-display:flex;
-align-items:center;
-justify-content:center;
-background:#0c122b;
-}
-.illus img{
-width:100%;
-height:100%;
-object-fit:cover;
-display:block;
-}
-    .illus svg{max-width:80%;height:auto;opacity:.9}
+    .grid { display:grid; gap:1.5rem; }
+    .grid-3 { grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); }
+    .grid-4 { grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); }
 
-    @media (max-width:900px){
-      .hero{grid-template-columns:1fr}
-      .grid{grid-template-columns:1fr}
-      .kpis{grid-template-columns:repeat(2,1fr)}
-      .contact{grid-template-columns:1fr}
-      header{gap:8px}
-      nav{display:none}
+    .card { background:var(--card); border-radius:16px; padding:1.5rem; box-shadow: var(--shadow); }
+    .card h3 { margin-bottom:.5rem; font-size:1.25rem; }
+    .card p { color:var(--muted); }
+
+    .kpi { text-align:center; }
+    .kpi .num { font-size:1.75rem; font-weight:700; color:var(--accent); display:block; margin-bottom:.25rem; }
+
+    footer { background:#111827; color:#9ca3af; padding:1.5rem; margin-top:3rem; }
+    footer .footer-container { max-width:1100px; margin:0 auto; display:flex; justify-content:space-between; flex-wrap:wrap; gap:1rem; font-size:.9rem; }
+
+    @media(max-width:800px) {
+      .hero { grid-template-columns:1fr; }
     }
   </style>
 </head>
 <body>
-  <div class="wrapper">
-    <header>
-      <div class="logo">
-        <!-- einfache Logo‑Marke als SVG -->
-        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <circle cx="32" cy="32" r="16" fill="#ffc857"/>
-          <path d="M32 2v10M32 52v10M2 32h10M52 32h10M11 11l7 7M46 46l7 7M11 53l7-7M46 18l7-7" stroke="#ffc857" stroke-width="3" stroke-linecap="round"/>
-        </svg>
-        <strong>Solartechnik Keil</strong>
-      </div>
+  <header>
+    <div class="header-container">
+      <div class="logo">⚡ Solartechnik Keil</div>
       <nav>
         <a href="#leistungen">Leistungen</a>
         <a href="#vorteile">Warum wir</a>
         <a href="#kontakt">Kontakt</a>
         <a class="cta" href="#kontakt">Angebot anfragen</a>
       </nav>
-    </header>
+    </div>
+  </header>
 
-    <section class="hero">
-      <div>
-        <span class="badge">⚡ Photovoltaik vom Spezialisten</span>
-        <h1>Ihre Solaranlage – geplant, montiert & in Betrieb genommen.</h1>
-        <p>Solartechnik Keil installiert Photovoltaik‑Anlagen für Einfamilienhäuser und Gewerbe. Wir begleiten Sie von der ersten Beratung über statische Prüfung und Montage bis zur Anmeldung beim Netzbetreiber.</p>
-        <p><a class="cta" href="#kontakt">Kostenloses Erstgespräch sichern</a></p>
-        <div class="grid" id="leistungen">
-          <div class="card">
-            <h3>Beratung & Planung</h3>
-            <p>Dachcheck, Auslegung, Ertragsprognose, Fördermittel.</p>
-          </div>
-          <div class="card">
-            <h3>Montage & Elektro</h3>
-            <p>Modul‑Montage, Wechselrichter, Speicher.</p>
-          </div>
-          <div class="card">
-            <h3>Service & Monitoring</h3>
-            <p>Inbetriebnahme, Anmeldung, Wartung, Fernüberwachung.</p>
-          </div>
-        </div>
-      </div>
-      <div class="illus card" aria-hidden="true">
-        <!-- Symbolische Illustration: Bild von mir -->
-        <img src="https://raw.githubusercontent.com/SolartechnikKeil/Solartechnik-Keil-Website/refs/heads/main/Foto-von-mir.png" alt="Solartechnik Keil – Beispielbild einer Photovoltaik-Anlage" />
-      </div>
-    </section>
+  <section class="hero">
+    <div>
+      <h1>Ihre Solaranlage – geplant, montiert & in Betrieb genommen.</h1>
+      <p>Solartechnik Keil installiert Photovoltaik‑Anlagen für Einfamilienhäuser und Gewerbe. Wir begleiten Sie von der ersten Beratung bis zur Anmeldung beim Netzbetreiber.</p>
+      <a href="#kontakt" class="cta">Kostenloses Erstgespräch sichern</a>
+    </div>
+    <div>
+      <img src="https://raw.githubusercontent.com/SolartechnikKeil/Solartechnik-Keil-Website/refs/heads/main/Foto-von-mir.png" alt="Solartechnik Keil – Beispielbild einer Photovoltaik-Anlage" />
+    </div>
+  </section>
 
-    <section class="section" id="vorteile">
-      <h2>Warum Solartechnik Keil?</h2>
-      <div class="kpis">
-        <div class="card"><span class="kpi-num">7+ Jahre</span><span>Erfahrung in PV‑Montage</span></div>
-        <div class="card"><span class="kpi-num">5 Jahre</span><span>Gewährleistung auf Montage</span></div>
-        <div class="card"><span class="kpi-num">24h</span><span>Reaktionszeit im Service</span></div>
-      </div>
-    </section>
-
-    <section class="section contact" id="kontakt">
-      <div>
-        <h2>Anfrage & Kontakt</h2>
-        <p>Sie planen eine PV‑Anlage? Schicken Sie uns einige Eckdaten – wir melden uns umgehend.</p>
-        <div class="card">
-          <!--
-            KONTAKTFORMULAR (funktioniert ohne eigenes Backend über Formspree o.ä.)
-            1) Ersetzen Sie die action‑URL unten durch Ihren Form‑Endpoint, z. B.:
-               https://formspree.io/f/XXXXXXXX
-            2) Alternativ: Auf Shared Hosting können Sie eine einfache PHP‑E‑Mail‑Weiterleitung nutzen.
-            3) Schnell & simpel (nicht so zuverlässig): action="mailto:ihrname@domain.de" mit enctype=text/plain.
-          -->
-          <form id="contactForm" method="POST" action="https://formspree.io/f/XXXXXXXX">
-            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
-            <label for="name">Ihr Name</label>
-            <input id="name" name="name" required placeholder="Max Mustermann" />
-
-            <label for="email">E‑Mail</label>
-            <input id="email" name="email" type="email" required placeholder="max@beispiel.de" />
-
-            <label for="phone">Telefon (optional)</label>
-            <input id="phone" name="phone" placeholder="0151 1234567" />
-
-            <label for="message">Nachricht</label>
-            <textarea id="message" name="message" required placeholder="Kurze Projektbeschreibung, z. B. Dachtyp, Postleitzahl, gewünschte Leistung…"></textarea>
-
-            <button class="cta" type="submit">Anfrage senden</button>
-            <p class="helper">Mit dem Senden stimmen Sie der Verarbeitung Ihrer Daten zum Zweck der Kontaktaufnahme zu. <a href="#impressum">Datenschutzhinweise</a></p>
-            <p class="success" id="okMsg">Danke! Ihre Nachricht wurde übermittelt.</p>
-            <noscript>
-              <p>Kein JavaScript? Schreiben Sie uns direkt: <a href="mailto:kontakt@solartechnik-keil.de">kontakt@solartechnik-keil.de</a></p>
-            </noscript>
-          </form>
-        </div>
+  <section class="section" id="leistungen">
+    <h2>Unsere Leistungen</h2>
+    <div class="grid grid-3">
+      <div class="card">
+        <h3>Beratung & Planung</h3>
+        <p>Dachcheck, Auslegung, Ertragsprognose, Fördermittel.</p>
       </div>
       <div class="card">
-        <h3>Kontakt</h3>
-        <p><strong>Solartechnik Keil</strong><br>
-           Marienstraße 15<br>
-           67346 Speyer</p>
-        <p>Telefon: <a href="tel:+4915563830285">+49 155 63830285</a><br>
-           E‑Mail: <a href="mailto:keilmichael@hotmail.de">keilmichael@hotmail.de</a></p>
-        <p>Öffnungszeiten: Mo–Fr 9–17 Uhr</p>
-        <p><small>USt‑IdNr.: DE350569414</small></p>
+        <h3>Montage & Elektro</h3>
+        <p>Modul‑Montage, Wechselrichter, Speicher.</p>
       </div>
-    </section>
+      <div class="card">
+        <h3>Service & Monitoring</h3>
+        <p>Inbetriebnahme, Anmeldung, Wartung, Fernüberwachung.</p>
+      </div>
+    </div>
+  </section>
 
-    <footer id="impressum">
+  <section class="section" id="vorteile">
+    <h2>Warum Solartechnik Keil?</h2>
+    <div class="grid grid-4">
+      <div class="card kpi"><span class="num">7+ Jahre</span>Erfahrung in PV‑Montage</div>
+      <div class="card kpi"><span class="num">5 Jahre</span>Gewährleistung auf Montage</div>
+      <div class="card kpi"><span class="num">24h</span>Reaktionszeit im Service</div>
+    </div>
+  </section>
+
+  <section class="section contact" id="kontakt">
+    <h2>Kontakt aufnehmen</h2>
+    <div class="card">
+      <h3>Solartechnik Keil</h3>
+      <p>Marienstraße 15<br>67346 Speyer</p>
+      <p>Telefon: <a href="tel:+4915563830285">+49 155 63830285</a><br>
+         E‑Mail: <a href="mailto:keilmichael@hotmail.de">keilmichael@hotmail.de</a></p>
+      <p>Öffnungszeiten: Mo–Fr 9–17 Uhr</p>
+      <p><small>USt‑IdNr.: DE350569414</small></p>
+    </div>
+  </section>
+
+  <!-- Datenschutz -->
+  <!--
+  <section id="datenschutz" class="section" style="background:#f9fafb;">
+    <div class="card">
+      <h2>Datenschutzerklärung</h2>
+      <p>Der Schutz Ihrer persönlichen Daten ist uns ein besonderes Anliegen. Wir verarbeiten Ihre Daten daher ausschließlich auf Grundlage der gesetzlichen Bestimmungen (DSGVO, TMG). Auf dieser Website werden personenbezogene Daten nur im technisch notwendigen Umfang erhoben.</p>
+      <p>Wenn Sie uns per Telefon oder E-Mail kontaktieren, werden die von Ihnen übermittelten Daten ausschließlich zum Zweck der Bearbeitung Ihrer Anfrage verarbeitet. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.</p>
+      <p>Wir weisen darauf hin, dass die Datenübertragung im Internet (z. B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.</p>
+      <p>Ihre Daten werden gelöscht, sobald der Zweck der Speicherung entfällt oder gesetzliche Aufbewahrungsfristen abgelaufen sind. Sie haben das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung Ihrer Daten sowie das Recht auf Datenübertragbarkeit.</p>
+      <p>Für Fragen zum Datenschutz wenden Sie sich bitte an: <a href="mailto:keilmichael@hotmail.de">keilmichael@hotmail.de</a></p>
+    </div>
+  </section> -->
+
+  <footer>
+    <div class="footer-container">
       <span>© <span id="y"></span> Solartechnik Keil • Alle Rechte vorbehalten</span>
-      <span><a href="#">Impressum</a> · <a href="#">Datenschutz</a></span>
-    </footer>
-  </div>
+      <span><a href="#kontakt">Impressum</a> <!--· <a href="#datenschutz">Datenschutz</a>--></span>
+    </div>
+  </footer>
 
   <script>
-    // Jahr automatisch setzen
     document.getElementById('y').textContent = new Date().getFullYear();
-
-    // Formspree: einfache Bestätigung ohne Seitenwechsel
-    const form = document.getElementById('contactForm');
-    const ok = document.getElementById('okMsg');
-    form?.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const endpoint = form.getAttribute('action');
-      try{
-        const res = await fetch(endpoint, {
-          method:'POST',
-          headers:{ 'Accept':'application/json' },
-          body: new FormData(form)
-        });
-        if(res.ok){
-          ok.style.display='block';
-          form.reset();
-        } else {
-          alert('Senden fehlgeschlagen. Bitte per E‑Mail melden.');
-        }
-      }catch(err){
-        alert('Netzwerkfehler. Bitte versuchen Sie es später erneut.');
-      }
-    });
   </script>
 </body>
 </html>
