@@ -1,61 +1,234 @@
 <!doctype html>
 <html lang="de">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Solartechnik Keil – Solaranlagen Planung & Installation</title>
-  <meta name="description" content="Solartechnik Keil plant und installiert Photovoltaik‑Anlagen für Eigenheime und Gewerbe. Von Beratung bis Inbetriebnahme – alles aus einer Hand." />
-  <link rel="icon" href="/favicon.ico" />
+  <meta name="description"
+    content="Solartechnik Keil plant und installiert Photovoltaik-Anlagen für Eigenheime und Gewerbe. Von Beratung bis Inbetriebnahme – alles aus einer Hand." />
+  <!-- Favicons -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#fbc02d">
   <style>
     :root {
-      --brand: #fbc02d; /* Solar-Gelb */
-      --accent: #0277bd; /* Blau */
+      --brand: #fbc02d;
+      /* Solar-Gelb */
+      --accent: #0277bd;
+      /* Blau */
       --bg: #f9fafb;
       --text: #1f2937;
       --muted: #6b7280;
       --card: #ffffff;
-      --shadow: 0 4px 12px rgba(0,0,0,0.08);
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     }
 
-    * { box-sizing: border-box; margin:0; padding:0; }
-    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-    header { background:#fff; box-shadow: var(--shadow); position:sticky; top:0; z-index:10; }
-    .header-container { max-width: 1100px; margin:0 auto; padding: 1rem 1.5rem; display:flex; justify-content:space-between; align-items:center; }
-    .logo { font-weight:700; font-size:1.25rem; color: var(--accent); display:flex; align-items:center; gap:.5rem; }
-    nav a { margin-left:1rem; font-weight:500; color: var(--text); }
-    .cta { background: var(--brand); color:#000; padding:.6rem 1rem; border-radius:8px; font-weight:600; box-shadow: var(--shadow); }
-    .cta:hover { filter:brightness(.95); }
+    body {
+      font-family: system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
 
-    .hero { max-width:1100px; margin:0 auto; padding:3rem 1.5rem; display:grid; grid-template-columns:1fr 1fr; gap:2rem; align-items:center; }
-    .hero h1 { font-size:2.5rem; font-weight:800; margin-bottom:1rem; }
-    .hero p { margin-bottom:1rem; color: var(--muted); }
-    .hero img { width:100%; border-radius:16px; box-shadow: var(--shadow); object-fit:cover; }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
 
-    .section { max-width:1100px; margin:0 auto; padding:3rem 1.5rem; }
-    .section h2 { font-size:2rem; margin-bottom:1.5rem; font-weight:700; text-align:center; }
+    a:hover {
+      text-decoration: underline;
+    }
 
-    .grid { display:grid; gap:1.5rem; }
-    .grid-3 { grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); }
-    .grid-4 { grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); }
+    header {
+      background: #fff;
+      box-shadow: var(--shadow);
+      /* Entfernt sticky-Verhalten */
+      position: relative;
+      top: auto;
+      z-index: 10;
+    }
 
-    .card { background:var(--card); border-radius:16px; padding:1.5rem; box-shadow: var(--shadow); }
-    .card h3 { margin-bottom:.5rem; font-size:1.25rem; }
-    .card p { color:var(--muted); }
+    .header-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-    .kpi { text-align:center; }
-    .kpi .num { font-size:1.75rem; font-weight:700; color:var(--accent); display:block; margin-bottom:.25rem; }
+    .logo {
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+    }
 
-    footer { background:#111827; color:#9ca3af; padding:1.5rem; margin-top:3rem; }
-    footer .footer-container { max-width:1100px; margin:0 auto; display:flex; justify-content:space-between; flex-wrap:wrap; gap:1rem; font-size:.9rem; }
+    nav {
+      display: flex;
+      align-items: center;
+    }
 
+    nav a {
+      margin-left: 1rem;
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .cta {
+      background: var(--brand);
+      color: #000;
+      padding: .6rem 1rem;
+      border-radius: 8px;
+      font-weight: 600;
+      box-shadow: var(--shadow);
+      white-space: nowrap;
+    }
+
+    .cta:hover {
+      filter: brightness(.95);
+    }
+
+    .hero {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      margin-bottom: 1rem;
+      color: var(--muted);
+    }
+
+    .hero img {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      object-fit: cover;
+    }
+
+    .section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .grid-4 {
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+    }
+
+    .card h3 {
+      margin-bottom: .5rem;
+      font-size: 1.25rem;
+    }
+
+    .card p {
+      color: var(--muted);
+    }
+
+    .kpi {
+      text-align: center;
+    }
+
+    .kpi .num {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--accent);
+      display: block;
+      margin-bottom: .25rem;
+    }
+
+    footer {
+      background: #111827;
+      color: #9ca3af;
+      padding: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    footer .footer-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: .9rem;
+    }
+
+    /* ---- MOBILE FIX ---- */
     @media(max-width:800px) {
-      .hero { grid-template-columns:1fr; }
+      .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        margin-top: .5rem;
+      }
+
+      nav a {
+        margin: .25rem 0;
+      }
+
+      .cta {
+        margin-top: .5rem;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
+
 <body>
   <header>
     <div class="header-container">
@@ -64,7 +237,7 @@
         <a href="#leistungen">Leistungen</a>
         <a href="#vorteile">Warum wir</a>
         <a href="#kontakt">Kontakt</a>
-        <a class="cta" href="#kontakt">Angebot anfragen</a>
+        <a class="cta" href="#kontakt">Angebot&nbsp;anfragen</a>
       </nav>
     </div>
   </header>
@@ -72,11 +245,14 @@
   <section class="hero">
     <div>
       <h1>Ihre Solaranlage – geplant, montiert & in Betrieb genommen.</h1>
-      <p>Solartechnik Keil installiert Photovoltaik‑Anlagen für Einfamilienhäuser und Gewerbe. Wir begleiten Sie von der ersten Beratung bis zur Anmeldung beim Netzbetreiber.</p>
+      <p>Solartechnik Keil installiert Photovoltaik-Anlagen für Einfamilienhäuser und Gewerbe. Wir begleiten Sie von der
+        ersten Beratung bis zur Anmeldung beim Netzbetreiber.</p>
       <a href="#kontakt" class="cta">Kostenloses Erstgespräch sichern</a>
     </div>
     <div>
-      <img src="https://raw.githubusercontent.com/SolartechnikKeil/Solartechnik-Keil-Website/refs/heads/main/Foto-von-mir.png" alt="Solartechnik Keil – Beispielbild einer Photovoltaik-Anlage" />
+      <img
+        src="https://raw.githubusercontent.com/SolartechnikKeil/Solartechnik-Keil-Website/refs/heads/main/Foto-von-mir.png"
+        alt="Solartechnik Keil – Beispielbild einer Photovoltaik-Anlage" />
     </div>
   </section>
 
@@ -85,11 +261,11 @@
     <div class="grid grid-3">
       <div class="card">
         <h3>Beratung & Planung</h3>
-        <p>Dachcheck, Auslegung, Ertragsprognose, Fördermittel.</p>
+        <p>Dachcheck, Auslegung, Ertragsprognose.</p>
       </div>
       <div class="card">
         <h3>Montage & Elektro</h3>
-        <p>Modul‑Montage, Wechselrichter, Speicher.</p>
+        <p>Modul-Montage, Wechselrichter, Speicher.</p>
       </div>
       <div class="card">
         <h3>Service & Monitoring</h3>
@@ -101,9 +277,20 @@
   <section class="section" id="vorteile">
     <h2>Warum Solartechnik Keil?</h2>
     <div class="grid grid-4">
-      <div class="card kpi"><span class="num">7+ Jahre</span>Erfahrung in PV‑Montage</div>
+      <div class="card kpi"><span class="num">7+ Jahre</span>Erfahrung in PV-Montage</div>
       <div class="card kpi"><span class="num">5 Jahre</span>Gewährleistung auf Montage</div>
       <div class="card kpi"><span class="num">24h</span>Reaktionszeit im Service</div>
+    </div>
+  </section>
+
+  <!-- Neue Sektion -->
+  <section class="section" id="regionen">
+    <h2>Wir sind für Sie da</h2>
+    <div class="card">
+      <p>in Speyer, Dudenhofen, Hahnhofen, Harthausen, Otterstadt, Waldsee, Schifferstadt, Böhl-Iggelheim, Römerberg,
+        Schwegenheim, Lingenfeld, Neuhofen, Limburgerhof, Gommersheim, Freisbach, Lustadt, Weingarten, Altdorf,
+        Geinsheim, Haßloch, Dannstadt-Schauernheim, Mutterstadt, Hochdorf-Assenheim, Altrip, Germersheim, Hockenheim und
+        an vielen weiteren Orten ...</p>
     </div>
   </section>
 
@@ -113,29 +300,16 @@
       <h3>Solartechnik Keil</h3>
       <p>Marienstraße 15<br>67346 Speyer</p>
       <p>Telefon: <a href="tel:+4915563830285">+49 155 63830285</a><br>
-         E‑Mail: <a href="mailto:keilmichael@hotmail.de">keilmichael@hotmail.de</a></p>
-      <p>Öffnungszeiten: Mo–Fr 9–17 Uhr</p>
-      <p><small>USt‑IdNr.: DE350569414</small></p>
+        E-Mail: <a href="mailto:keilmichael@hotmail.de">keilmichael@hotmail.de</a></p>
+      <p>Öffnungszeiten: Mo–Fr 9–17 Uhr</p>
+      <p><small>USt-IdNr.: DE350569414</small></p>
     </div>
   </section>
-
-  <!-- Datenschutz -->
-  <!--
-  <section id="datenschutz" class="section" style="background:#f9fafb;">
-    <div class="card">
-      <h2>Datenschutzerklärung</h2>
-      <p>Der Schutz Ihrer persönlichen Daten ist uns ein besonderes Anliegen. Wir verarbeiten Ihre Daten daher ausschließlich auf Grundlage der gesetzlichen Bestimmungen (DSGVO, TMG). Auf dieser Website werden personenbezogene Daten nur im technisch notwendigen Umfang erhoben.</p>
-      <p>Wenn Sie uns per Telefon oder E-Mail kontaktieren, werden die von Ihnen übermittelten Daten ausschließlich zum Zweck der Bearbeitung Ihrer Anfrage verarbeitet. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.</p>
-      <p>Wir weisen darauf hin, dass die Datenübertragung im Internet (z. B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.</p>
-      <p>Ihre Daten werden gelöscht, sobald der Zweck der Speicherung entfällt oder gesetzliche Aufbewahrungsfristen abgelaufen sind. Sie haben das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung Ihrer Daten sowie das Recht auf Datenübertragbarkeit.</p>
-      <p>Für Fragen zum Datenschutz wenden Sie sich bitte an: <a href="mailto:keilmichael@hotmail.de">keilmichael@hotmail.de</a></p>
-    </div>
-  </section> -->
 
   <footer>
     <div class="footer-container">
       <span>© <span id="y"></span> Solartechnik Keil • Alle Rechte vorbehalten</span>
-      <span><a href="#kontakt">Impressum</a> <!--· <a href="#datenschutz">Datenschutz</a>--></span>
+      <span><a href="#kontakt">Impressum</a></span>
     </div>
   </footer>
 
@@ -143,4 +317,5 @@
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
 </body>
+
 </html>
